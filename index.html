@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="BMI-container">
+      <header class="header">
+        <h1>BMI Calculator</h1>
+      </header>
+      <form class="form">
+        <div class="gender-container">
+          <div class="male activeTab">
+            <i class="fas fa-mars"></i>
+            <span>Male</span>
+          </div>
+          <div class="female activeTab">
+            <i class="fas fa-venus"></i>
+            <span>Female</span>
+          </div>
+        </div>
+        <div class="height-weight-container">
+          <div class="height-container">
+            <h1>Height</h1>
+            <div class="height-value">0cm</div>
+            <input
+              type="range"
+              min="0"
+              max="250"
+              value="0"
+              id="height"
+              placeholder="height"
+              onchange="heightSlider(this.value)"
+              onmousemove="heightSlider(this.value)"
+            />
+          </div>
+          <div class="weight-container">
+            <h1>Weight</h1>
+            <div class="weight-value">0</div>
+            <input
+              type="range"
+              min="0"
+              max="250"
+              value="0"
+              id="weight"
+              placeholder="weight"
+              onchange="weightSlider(this.value)"
+              onmousemove="weightSlider(this.value)"
+            />
+          </div>
+        </div>
+        <button type="submit" class="submitBtn">Calculate</button>
+      </form>
+      <div class="result-container">
+        <div class="result">
+            <h1 class="BMI">18</h1>
+          <div class="normal-range">
+            <p>Normal BMI Range:</p>
+            <p>18.5 - 25kg/m²</p>
+          </div>
+          <p class="feedback">You have a normal Body Weight!</p>
+          <button class="again">Calculate Again</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
